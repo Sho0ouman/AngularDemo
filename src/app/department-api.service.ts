@@ -20,9 +20,6 @@ export class DepartmentApiService {
       .get(API_URL)
       .map(response => {
         const deps = response.json();
-        // *********************************
-        console.log(deps);
-        // *********************************
         return deps.map((dep) => new Department(dep));
       })
       .catch(this.handleError);

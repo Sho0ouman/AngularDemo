@@ -12,4 +12,16 @@ export class DepartmentDataService {
   getAll(): Observable<Department[]> {
     return this.api.getAll();
   }
+
+  create(dep: Department): Observable<any> {
+    return this.api.create(dep);
+  }
+
+  edit(dep: Department): Observable<any> {
+    return this.api.update(dep);
+  }
+
+  delete(id: number): Observable<any> {
+    return this.api.delete(id);
+  }
 }
